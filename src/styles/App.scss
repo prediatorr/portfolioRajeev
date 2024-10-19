@@ -6,147 +6,182 @@ $text-color: wheat;
 
 html,
 body {
-	margin: 0;
-	padding: 0;
-	background-color: $purple;
+  margin: 0;
+  padding: 0;
+  background-color: $purple;
 }
 
 * {
-	text-decoration: none;
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	width: inherit;
-	font-family: "Inter", sans-serif;
-	line-height: 1;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  width: inherit;
+  font-family: "Inter", sans-serif;
+  line-height: 1;
 }
 
 .container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-	.App {
-		width: 100%;
-		padding: 5rem;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
+  .App {
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
-		.main {
-			font-size: 7rem;
-			letter-spacing: 0.1rem;
-			color: $text-color;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+    .main {
+      font-size: 7rem;
+      letter-spacing: 0.1rem;
+      color: $text-color;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-			.title {
-				width: auto;
+      .title {
+        width: auto;
 
-				.heading {
-					text-transform: uppercase;
-					text-align: right;
-				}
-			}
+        .heading {
+          text-transform: uppercase;
+          text-align: right;
+        }
+      }
 
-			.arrow {
-				width: 450px;
+      .arrow {
+        width: 450px;
 
-				svg {
-					width: 100%;
-					height: auto;
-					fill: $orange;
-				}
-			}
-		}
+        svg {
+          width: 100%;
+          height: auto;
+          fill: $orange;
+        }
+      }
+    }
 
-		.divider {
-			width: 100%;
-			border: 5px solid $text-color;
-		}
+    .divider {
+      width: 100%;
+      border: 5px solid $text-color;
+    }
 
-		.slogan {
-			text-align: right;
-			font-size: 2.5rem;
-			text-transform: uppercase;
-			color: $orange;
-			font-weight: 600;
-			padding: 1rem;
-		}
-	}
+    .slogan {
+      text-align: right;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: $orange;
+      font-weight: 600;
+      padding: 1rem;
+    }
+  }
 
-	.works {
-		transform-origin: 50% 0;
-		scale: 0.25;
-		width: 100%;
-		height: 100vh;
-		z-index: 1;
-		background: black;
-		color: white;
+  .works {
+    transform-origin: 50% 0;
+    scale: 0.25;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: black;
+    color: white;
 
-		.portfolio-header {
-			padding: 5rem;
-			display: flex;
-			flex-direction: column;
-			text-transform: uppercase;
+    .portfolio-header {
+      padding: 5rem;
+      display: flex;
+      flex-direction: column;
+      text-transform: uppercase;
 
-			.header-part {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
+      .header-part {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-				.header-text {
-					&:last-of-type {
-						text-align: right;
-					}
-				}
-			}
-			.divider {
-				margin-top: 1rem;
-				width: 100%;
-				height: 5px;
-				background: $purple;
-			}
+        .header-text {
+          &:last-of-type {
+            text-align: right;
+          }
+        }
+      }
+      .divider {
+        margin-top: 1rem;
+        width: 100%;
+        height: 5px;
+        background: $purple;
+      }
 
-			.our-works-heading {
-				margin: 2rem 0;
-				font-size: 10rem;
-				font-weight: 500;
-			}
+      .our-works-heading {
+        margin: 2rem 0;
+        font-size: 10rem;
+        font-weight: 500;
+      }
 
-			.our-works {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
+      .our-works {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
-				.work {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					padding: 2rem 5rem;
-					border-top: 2px dashed white;
+        .work {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2rem 5rem;
+          border-top: 2px dashed white;
 
-					span {
-						font-size: 2.5rem;
-						font-weight: 200;
-						flex: 10;
+          span {
+            font-size: 2.5rem;
+            font-weight: 200;
+            flex: 10;
 
-						&:first-of-type {
-							flex: 1;
-						}
+            &:first-of-type {
+              flex: 1;
+            }
 
-						&:last-of-type {
-							flex: 0;
-							width: fit-content;
-							cursor: pointer;
-						}
-					}
-				}
-			}
-		}
-	}
+            &:last-of-type {
+              flex: 0;
+              width: fit-content;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact-us {
+    display: flex;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    align-items: center;
+    .quote {
+      font-size: 3.5rem;
+      font-weight: bolder;
+      color: white;
+      p {
+        color: #ff8000;
+        width: 60%;
+        font-weight: bolder;
+      }
+    }
+    .query {
+      display: flex;
+      flex-direction: column;
+      color: #888888;
+      input {
+        width: 48rem;
+        height: 3.5rem;
+        margin-top: 0.2rem;
+        margin-bottom: 1.2rem;
+      }
+      button {
+        height: 3.5rem;
+        background-color: #ff8000;
+        color: white;
+        border: none;
+        border-radius: 6px;
+      }
+    }
+  }
 }
