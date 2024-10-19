@@ -85,5 +85,68 @@ body {
 		height: 100vh;
 		z-index: 1;
 		background: black;
+		color: white;
+
+		.portfolio-header {
+			padding: 5rem;
+			display: flex;
+			flex-direction: column;
+			text-transform: uppercase;
+
+			.header-part {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.header-text {
+					&:last-of-type {
+						text-align: right;
+					}
+				}
+			}
+			.divider {
+				margin-top: 1rem;
+				width: 100%;
+				height: 5px;
+				background: $purple;
+			}
+
+			.our-works-heading {
+				margin: 2rem 0;
+				font-size: 10rem;
+				font-weight: 500;
+			}
+
+			.our-works {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				.work {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 2rem 5rem;
+					border-top: 2px dashed white;
+
+					span {
+						font-size: 2.5rem;
+						font-weight: 200;
+						flex: 10;
+
+						&:first-of-type {
+							flex: 1;
+						}
+
+						&:last-of-type {
+							flex: 0;
+							width: fit-content;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
 	}
 }

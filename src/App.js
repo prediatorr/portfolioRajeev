@@ -7,7 +7,7 @@ function App() {
 	useGSAP(() => {
 		ScrollTrigger.create({
 			trigger: ".App",
-			start: "top top",
+			start: "start start",
 			end: "+=100%",
 			pin: ".home",
 			pinSpacing: false,
@@ -17,7 +17,7 @@ function App() {
 			scale: 1,
 			scrollTrigger: {
 				trigger: ".works",
-				start: "top center",
+				start: "start center",
 				end: "end start",
 				scrub: true,
 			},
@@ -57,7 +57,40 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="works">Hello World!</div>
+			<div className="works">
+				<div className="portfolio-header">
+					<div className="header-part">
+						<div className="header-text">Portfolio</div>
+						<div className="header-text">
+							See All Projects &rarr;
+						</div>
+					</div>
+					<div className="divider"></div>
+					<h1 className="our-works-heading">Selected works</h1>
+					<div className="our-works">
+						<div className="work">
+							<span>1.</span>
+							<span>First Project</span>
+							<span>+</span>
+						</div>
+						<div className="work">
+							<span>2.</span>
+							<span>Second Project</span>
+							<span>+</span>
+						</div>
+						<div className="work">
+							<span>3.</span>
+							<span>Third Project</span>
+							<span>+</span>
+						</div>
+						<div className="work">
+							<span>4.</span>
+							<span>Fourth Project</span>
+							<span>+</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 }
