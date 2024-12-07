@@ -9,6 +9,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: $purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 * {
@@ -49,6 +52,8 @@ body {
         .heading {
           text-transform: uppercase;
           text-align: right;
+          font-weight: bolder;
+          font-size: larger;
         }
       }
 
@@ -177,11 +182,158 @@ body {
       }
       button {
         height: 3.5rem;
+        width: 48.2rem;
         background-color: #ff8000;
         color: white;
         border: none;
         border-radius: 6px;
       }
     }
+  }
+  .video-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 1600px;
+    margin-bottom: 8rem;
+    // background-color: #888888;
+    overflow: hidden;
+    video {
+      // width: 100px;
+      height: auto;
+      border-radius: 50px 0 50px 0; /* Top-left and bottom-right corners curved */
+      overflow: hidden; /* Ensures content stays within the rounded corners */
+    }
+    h1 {
+      position: absolute;
+      bottom: 25%;
+      right: 0%;
+      color: white;
+      font-size: 5rem;
+      width: 30%;
+      text-align: left;
+      z-index: 1;
+      font-weight: bolder;
+      text-shadow: 2px 2px 4px rgba(1, 1, 1, 1);
+    }
+  }
+  .services {
+    margin-left: 12rem;
+    color: $text-color;
+    display: flex;
+    h1 {
+      font-size: 8rem;
+      font-weight: bolder;
+      width: 30%;
+    }
+    .service-btn {
+      margin-top: 4rem;
+      margin-left: 25rem;
+      cursor: pointer;
+      width: 50%;
+    }
+  }
+  .cards {
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    justify-content: space-evenly; /* Creates even space between cards */
+    width: 60%;
+    position: relative;
+    color: black;
+    background-color: white;
+    margin: 9rem 0;
+    // gap: 0rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%; /* Center the line */
+      width: 2px; /* Line thickness */
+      background-color: black; /* Purple color to match the theme */
+      z-index: 1;
+      transform: translateX(-50%); /* Adjust for centering */
+    }
+    .card {
+      border: 2px solid #5300ed; /* Purple border */
+      border-radius: 15px; /* Rounded corners */
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+      transition: transform 0.3s;
+      margin: 1rem;
+      width: auto; /* Adapts to content width */
+      max-width: 45%; /* Optional: Prevents cards from being too wide */
+      text-align: center; /* Centers text within the card */
+
+      &:hover {
+        background-color: #5717ce;
+        color: white;
+      }
+
+      h1 {
+        font-weight: bolder;
+        font-size: 4rem;
+        color: #ff8000;
+      }
+
+      ul {
+        margin: 1.4rem 0;
+        list-style-type: none;
+      }
+
+      li {
+        margin: 0.6rem 0;
+        font-size: larger;
+      }
+    }
+
+    .left {
+      align-self: flex-start; /* Aligns the card to the left */
+    }
+
+    .right {
+      align-self: flex-end; /* Aligns the card to the right */
+    }
+    /* Big Dot After Left Card */
+    .left::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: #5300ed;
+      border-radius: 50%; /* Makes it a circle */
+      position: absolute;
+      left: 28rem; /* Places it just outside the card */
+      top: 10%;
+      transform: translateY(-50%);
+    }
+
+    /* Big Dot Before Right Card */
+    .right::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: #5300ed;
+      border-radius: 50%; /* Makes it a circle */
+      position: absolute;
+      right: 45%; /* Places it just outside the card */
+      top: 40%;
+      transform: translateY(-50%);
+    }
+  }
+  .resume {
+    color: $text-color;
+    margin: 2rem 0;
+    h1 {
+      font-size: 3rem;
+      font-weight: bolder;
+    }
+  }
+  .skillmeter {
+    width: 100%;
+    height: 3rem;
   }
 }

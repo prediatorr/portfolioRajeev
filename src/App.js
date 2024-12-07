@@ -2,6 +2,10 @@ import "./styles/App.scss";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { useState } from "react";
+import SkillsShowcase from "./components/SkillsShowcase";
+import Profile from "./components/Profile.js"
+import ResumeButton from "./components/ResumeButton.js";
 
 function App() {
   useGSAP(() => {
@@ -24,13 +28,26 @@ function App() {
     });
   });
 
+  const handleDownload = () => {
+    // Create an anchor element
+    const link = document.createElement("a");
+    link.href = "/rajeev'sResume.pdf"; // path to your PDF in the public folder
+    link.download = "rajeev'sResume.pdf"; // filename for the download
+    link.click(); // Simulate a click to start the download
+    // setTimeout(() => {
+    //   const filePath = "/rajeev'sResume.pdf"; // This can be a local path to the file
+    //   window.open(filePath, "_blank"); // Open the file in a new tab after download starts
+    // }, 5000);
+  };
+
   return (
-    <div className="container">
+    <div className="container ">
+        <Profile />
       <div className="App">
         <div className="home">
           <div className="main">
             <div className="title">
-              <h1 className="heading">Prgmaz</h1>
+              <h1 className="heading">Rajeev's</h1>
               <h1 className="heading">Studio</h1>
             </div>
             <div className="arrow">
@@ -66,23 +83,17 @@ function App() {
           <div className="our-works">
             <div className="work">
               <span>1.</span>
-              <span>First Project</span>
-              <span>+</span>
+              <span>Restaurant Food App</span>
+              <span>
+                <a href="https://foodvillafront.onrender.com/">+</a>
+              </span>
             </div>
             <div className="work">
               <span>2.</span>
-              <span>Second Project</span>
-              <span>+</span>
-            </div>
-            <div className="work">
-              <span>3.</span>
-              <span>Third Project</span>
-              <span>+</span>
-            </div>
-            <div className="work">
-              <span>4.</span>
-              <span>Fourth Project</span>
-              <span>+</span>
+              <span>3d Model used in web</span>
+              <span>
+                <a href="https://rajeevs-portfolio.vercel.app/">+</a>
+              </span>
             </div>
           </div>
         </div>
@@ -105,6 +116,20 @@ function App() {
           <button>Submit</button>
         </div>
       </div>
+      <div className="video-container">
+        <h1>WE WORK HARD TO MAKE IT ALIVE.</h1>
+        <video width="1600" autoPlay loop>
+          <source src="./working.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <SkillsShowcase />
+      <div className="resume">
+        <h1>DOWNLOAD RESUME</h1>
+        <br />
+        <ResumeButton onClick={handleDownload} />
+      </div>
+      
     </div>
   );
 }
