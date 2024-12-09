@@ -516,7 +516,7 @@ body {
 
 @media (max-width: 480px) {
   .container {
-    .App {
+    .App {margin-bottom: 4rem;
       .main {
         font-size: 3rem;
         .arrow {
@@ -542,6 +542,9 @@ body {
       }
     }
     .contact-us {
+      padding-top: 2rem;
+      background-color: #5300ed;
+      z-index: 100;
       .quote {
         font-size: 1.5rem;
       }
