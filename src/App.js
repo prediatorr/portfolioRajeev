@@ -116,6 +116,7 @@ function App() {
           <button>Submit</button>
         </div>
       </div>
+      <SkillsShowcase />
       <div className="video-container">
         <h1>WE WORK HARD TO MAKE IT ALIVE.</h1>
         <video width="1600" autoPlay loop>
@@ -123,7 +124,7 @@ function App() {
           Your browser does not support the video tag.
         </video>
       </div>
-      <SkillsShowcase />
+      
       <div className="resume">
         <h1>DOWNLOAD RESUME</h1>
         <br />
