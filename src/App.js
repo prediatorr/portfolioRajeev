@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { useState } from "react";
 import SkillsShowcase from "./components/SkillsShowcase";
-import Profile from "./components/Profile.js"
+import Profile from "./components/Profile.js";
 import ResumeButton from "./components/ResumeButton.js";
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div className="container ">
-        <Profile />
+      <Profile />
       <div className="App">
         <div className="home">
           <div className="main">
@@ -98,6 +98,17 @@ function App() {
           </div>
         </div>
       </div>
+
+      <SkillsShowcase />
+
+      <div className="video-container">
+        <h1>WE WORK HARD TO MAKE IT ALIVE.</h1>
+        <video width="1600" autoPlay loop>
+          <source src="./working.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
       <div className="contact-us">
         <div className="quote">
           <h1>WE HAVE</h1>
@@ -116,21 +127,12 @@ function App() {
           <button>Submit</button>
         </div>
       </div>
-      <SkillsShowcase />
-      <div className="video-container">
-        <h1>WE WORK HARD TO MAKE IT ALIVE.</h1>
-        <video width="1600" autoPlay loop>
-          <source src="./working.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      
+
       <div className="resume">
         <h1>DOWNLOAD RESUME</h1>
         <br />
         <ResumeButton onClick={handleDownload} />
       </div>
-      
     </div>
   );
 }

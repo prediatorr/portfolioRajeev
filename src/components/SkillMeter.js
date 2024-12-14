@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import '../tailwind.css';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import "../tailwind.css";
 
 export function SkillMeter({ name, level, color }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
+    <div
       className="mb-6 skillmeter"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -28,8 +28,8 @@ export function SkillMeter({ name, level, color }) {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mt-2 text-sm text-gray-600"
-          style={{ minHeight: '20px' }}  // Ensure consistent height when visible
+          className="mt-1.3 text-sm text-gray-600"
+          style={{ minHeight: "20px" }} // Ensure consistent height when visible
         >
           {getSkillDescription(name)}
         </motion.div>
@@ -42,11 +42,15 @@ function getSkillDescription(skill) {
   const descriptions = {
     HTML: "Proficient in creating semantic and accessible HTML structures.",
     CSS: "Skilled in responsive design, Flexbox, Grid, and CSS animations.",
-    React: "Experienced in building complex UIs with hooks and state management.",
-    JavaScript: "Strong understanding of ES6+, async programming, and DOM manipulation.",
+    React:
+      "Experienced in building complex UIs with hooks and state management.",
+    JavaScript:
+      "Strong understanding of ES6+, async programming, and DOM manipulation.",
     Express: "Capable of creating RESTful APIs and handling server-side logic.",
     MongoDB: "Experienced in designing schemas and performing CRUD operations.",
-    MySQL: "Proficient in relational database design and complex SQL queries."
+    MySQL: "Proficient in relational database design and complex SQL queries.",
   };
-  return descriptions[skill] || "Skilled in various aspects of this technology.";
+  return (
+    descriptions[skill] || "Skilled in various aspects of this technology."
+  );
 }

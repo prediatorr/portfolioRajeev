@@ -85,7 +85,11 @@ body {
       padding: 1rem;
     }
   }
-
+  .skillz{
+    background-color: #5300ed;
+    color: $text-color;
+    z-index: 10000;
+  }
   .works {
     transform-origin: 50% 0;
     scale: 0.25;
@@ -160,7 +164,7 @@ body {
 
   .contact-us {
     display: flex;
-    margin-top: 10rem;
+    margin-top: 4rem;
     margin-bottom: 10rem;
     align-items: center;
     .quote {
@@ -444,7 +448,7 @@ body {
     }
 
     .contact-us {
-      margin: 5rem 0;
+      margin: 3rem 0;
       padding-top: 2rem;
       background-color: #5300ed;
       z-index: 100;
@@ -545,7 +549,7 @@ body {
       }
     }
     .contact-us {
-      padding-top: 2rem;
+      padding-top: 1rem;
       background-color: #5300ed;
       z-index: 100;
       .quote {

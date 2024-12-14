@@ -17,7 +17,7 @@ export default function SkillsShowcase() {
   ];
 
   return (
-    <section className="py-12 bg-gray-50 my-4">
+    <section className="py-12 bg-gray-50 my-16 skillz">
       <div className="container mx-auto px-4 max-w-3xl">
         <h2 className="text-3xl font-bold text-center mb-8">My Skills</h2>
         <div className="bg-white shadow-lg rounded-lg p-6">
